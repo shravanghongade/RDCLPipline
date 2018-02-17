@@ -33,9 +33,9 @@ node ('centos_slave'){
  input 'Deploy to Staging?'
  
  stage ('Deploy to AppServer') {
- sh 'cp target/petclinic.war /opt/apache-tomcat-8.5.21/webapps'
- sh 'sudo /opt/apache-tomcat-8.5.21/bin/shutdown.sh'
- sh 'sudo /opt/apache-tomcat-8.5.21/bin/startup.sh'
+ sh 'cp target/petclinic.war /usr/share/tomcat/webapps'
+ // sh 'sudo /opt/apache-tomcat-8.5.21/bin/shutdown.sh'
+// sh 'sudo /opt/apache-tomcat-8.5.21/bin/startup.sh'
  }
  
   notify('Completed')  
